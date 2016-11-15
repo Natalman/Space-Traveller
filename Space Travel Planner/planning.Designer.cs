@@ -197,7 +197,7 @@
             this.panel1.Controls.Add(this.chbActivity3);
             this.panel1.Controls.Add(this.chbActivity2);
             this.panel1.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(24, 47);
+            this.panel1.Location = new System.Drawing.Point(345, 47);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(302, 129);
             this.panel1.TabIndex = 17;
@@ -206,7 +206,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Palatino Linotype", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(32, 22);
+            this.label4.Location = new System.Drawing.Point(356, 22);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(170, 22);
             this.label4.TabIndex = 18;
@@ -218,7 +218,7 @@
             this.panel2.Controls.Add(this.rbThree);
             this.panel2.Controls.Add(this.rbFive);
             this.panel2.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(345, 47);
+            this.panel2.Location = new System.Drawing.Point(24, 47);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(267, 118);
             this.panel2.TabIndex = 19;
@@ -227,7 +227,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Palatino Linotype", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(360, 22);
+            this.label5.Location = new System.Drawing.Point(35, 22);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(58, 22);
             this.label5.TabIndex = 20;

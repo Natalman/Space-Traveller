@@ -9,6 +9,7 @@ namespace Space_Travel_Planner
 {
     class Caller
     {
+        //Method to load array items as checkbox name by setting the array indexes into text propreties of checkboxes
         public static void boxChecker(string[] Activities, CheckBox Activity1, CheckBox Activity2, CheckBox Activity3)
         {
             Activity1.Text = Activities[0]; //change the checkbox to use the first index of the array called
@@ -16,11 +17,12 @@ namespace Space_Travel_Planner
             Activity3.Text = Activities[2]; //change the checkbox to use the third index of the array called
         }
 
+        //Method that calculates the trip expenses
         public static void pricing(string Hotel, double price, CheckBox Act1,CheckBox Act2, CheckBox Act3,
             TextBox summary, TextBox Subtotal, TextBox Tax, TextBox STotal, DateTimePicker TripDate)
         {
-            List<string> Summary = new List<string>();
-            Summary.Add("Trip Date: " + TripDate.Value.ToString("MMMM dd, yyyy"));
+            List<string> Summary = new List<string>();      //Creating an arraylist of summary of the activities
+            Summary.Add("Trip Date: " + TripDate.Value.ToString("MMMM dd, yyyy"));//Adding date as first element of the arraylist
             Summary.Add("Hotel: " + Hotel);    //Adding the name of the main course to the summary list
             Summary.Add("******** Activities **********");
             string Printing = "";
@@ -46,22 +48,24 @@ namespace Space_Travel_Planner
             double tax = (price * 7.75) / 100;//Calculating tax
             double Total = tax + price;         //Calculating total
 
-            Subtotal.Text = String.Format("{0:c}", price);//sending the subtotal to its textbox
+            Subtotal.Text = String.Format("{0:c}", price);  //sending the subtotal to its textbox
             Tax.Text = String.Format("{0:c}", tax);         //Sending the Tax to its textbox
             STotal.Text = String.Format("{0:c}", Total);    //Sending the the Total to it textbox
 
             Summary.Add("********** Pricing ************");
-            Summary.Add("Price: " + Convert.ToString(Subtotal.Text));
-            Summary.Add("Tax: " + Convert.ToString(Tax.Text));
-            Summary.Add("Final Price: " + Convert.ToString(STotal.Text));
+            Summary.Add("Price: " + Convert.ToString(Subtotal.Text));//Converting the price into currency type 
+            Summary.Add("Tax: " + Convert.ToString(Tax.Text));//Converting tax into currency type
+            Summary.Add("Final Price: " + Convert.ToString(STotal.Text));//Converting total into currency type
             Summary.Add("");
             Summary.Add("##########################");
 
+            //Going trought the arraylist to print it out
             for (int n = 0; n < Summary.Count; n++)
                 Printing += Summary[n] + "\r\n";
             summary.Text = Printing;
         }
         
+        //Displaying Trip summary into a listbox
         public static void ShowList(ListBox sum, List<string> ArrSumm)
         {
             for(int m = 0; m < ArrSumm.Count; m++)
@@ -70,12 +74,15 @@ namespace Space_Travel_Planner
             }
         }
 
+        //Method called to add items to comboboxes
         public static void ComboCheck(ComboBox ItemContain, string[] ArrayContain)
         {
             foreach (string Item in ArrayContain)
                 ItemContain.Items.Add(Item);
             ItemContain.SelectedIndex = 0;
         }
+
+        //Method called to delete items form a listbox (Trips from trip summary)
         public static void DeleteTrip(ListBox lstdeleted)
         {
             if (lstdeleted.SelectedIndex != -1)
@@ -84,7 +91,7 @@ namespace Space_Travel_Planner
             }
             else
             {
-                MessageBox.Show("please select trip to be delected");
+                MessageBox.Show("please select trip to be delected"); //Show this message when anything is selected
             }
         }
     }
